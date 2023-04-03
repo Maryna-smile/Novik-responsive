@@ -25,6 +25,7 @@ body {
 
 .nav-list {
   position: relative;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,11 +41,66 @@ body {
   }
 }
 
+.burger {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 68px;
+  right: 10px;
+
+  width: 33px;
+  height: 19px;
+
+  background-image: url(../images/burger-menu/burger.svg);
+
+  transition: all 150ms;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
+
+.active {
+  width: 23px;
+  height: 22px;
+
+   padding-right: 28px;
+
+  background-image: url(../images/burger-menu/close.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.burger-menu {
+  position: absolute;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+ 
+  width: 100%;
+  max-width: 768px;
+ 
+  background-color: var(--white);
+  padding-top: 68px;
+  padding-left: 26px;
+ }
+
 .nav-item {
   color: var(--grey);
   letter-spacing: 0.02em;
   transition: all 250ms ease;
 }
+
+
+.burger-menu .nav-item {
+  font-family: "Gilroy-Bold";
+  font-size: 34px;
+  line-height: 1.23;
+  margin-bottom: 68px;
+ }
 
 .current {
   color: var(--black);
@@ -85,20 +141,6 @@ body {
   }
 }
 
-.burger {
-  position: absolute;
-  top: 68px;
-  right: 30px;
-
-  display: none;
-  width: 33px;
-  height: 19px;
-
-  @media screen and (max-width: 768px) {
-    display: block;
-  }
-}
-
 .hero {
   display: block;
   max-width: 970px;
@@ -106,7 +148,7 @@ body {
   padding-bottom: 104px;
 
   @media screen and (max-width: 768px) {
-     padding-bottom: 83px;
+    padding-bottom: 83px;
   }
 }
 
@@ -120,13 +162,13 @@ body {
   margin-bottom: 50px;
 
   @media screen and (max-width: 768px) {
-  width: 124px;
-  margin-top: 55px;
+    width: 124px;
+    margin-top: 55px;
   }
 }
 
 .hero-img {
-    width: 100%;
+  width: 100%;
 }
 
 .about {
@@ -139,7 +181,7 @@ body {
   @media screen and (max-width: 768px) {
     padding-top: 81px;
     padding-bottom: 76px;
-    }
+  }
 }
 
 .about-block {
@@ -149,12 +191,12 @@ body {
   gap: 30px;
   max-width: 480px;
   margin: 0 auto;
-  
+
   width: 485px;
 
   @media screen and (max-width: 768px) {
     width: 316px;
-    }
+  }
 }
 
 .about-title {
@@ -165,18 +207,18 @@ body {
 
   @media screen and (max-width: 768px) {
     margin-bottom: 29px;
-    }
+  }
 }
 
 .skills {
   text-align: center;
   padding-top: 91px;
   padding-bottom: 110px;
-  
+
   @media screen and (max-width: 768px) {
     padding-top: 83px;
     padding-bottom: 98px;
-    }
+  }
 }
 
 .skills-title {
@@ -187,7 +229,7 @@ body {
 
   @media screen and (max-width: 768px) {
     margin-bottom: 50px;
-    }
+  }
 }
 
 .skills-subtitle {
@@ -195,7 +237,7 @@ body {
 
   @media screen and (max-width: 768px) {
     margin-bottom: 70px;
-    }
+  }
 }
 
 .skills-list {
@@ -209,7 +251,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 70px;
-    }
+  }
 }
 
 .skills-item {
@@ -253,7 +295,7 @@ body {
   @media screen and (max-width: 768px) {
     padding-top: 81px;
     padding-bottom: 80px;
-    }
+  }
 }
 
 .portfolio-title {
@@ -264,7 +306,7 @@ body {
 
   @media screen and (max-width: 768px) {
     margin-bottom: 64px;
-    }
+  }
 }
 
 .portfolio-img {
@@ -274,7 +316,7 @@ body {
 
   @media screen and (max-width: 768px) {
     margin-bottom: 33px;
-    }
+  }
 }
 
 .portfolio-text {
@@ -290,7 +332,7 @@ footer {
   @media screen and (max-width: 768px) {
     padding-top: 82px;
     padding-bottom: 90px;
-    }
+  }
 }
 
 .footer-title {
@@ -301,7 +343,7 @@ footer {
 
   @media screen and (max-width: 768px) {
     margin-bottom: 27px;
-    }
+  }
 }
 
 .footer-text {
@@ -309,7 +351,7 @@ footer {
 
   @media screen and (max-width: 768px) {
     margin-bottom: 39px;
-    }
+  }
 }
 
 .footer-button {
@@ -333,7 +375,7 @@ footer {
   @media screen and (max-width: 768px) {
     margin-bottom: 48px;
     width: 316px;
-    }
+  }
 }
 
 .footer-social-list {
@@ -349,7 +391,7 @@ footer {
   @media screen and (max-width: 768px) {
     margin-bottom: 49px;
     width: 315px;
-    }
+  }
 }
 
 .footer-text-bottom {
@@ -361,5 +403,5 @@ footer {
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    }
+  }
 }
