@@ -29,7 +29,7 @@ picture {
 
 .nav-list {
   position: relative;
-
+ 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,6 +40,14 @@ picture {
   padding-top: 32px;
   padding-bottom: 32px;
 
+  @media screen and (max-width: 1200px) {
+    gap: 30px;
+  }
+
+  @media screen and (max-width: 900px) {
+    gap: 20px;
+  }
+
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -49,7 +57,6 @@ picture {
   display: none;
   position: absolute;
   z-index: 2;
-  top: 68px;
   right: 10px;
 
   width: 33px;
@@ -59,8 +66,16 @@ picture {
 
   transition: all 150ms;
 
+  cursor: pointer;
+
   @media screen and (max-width: 768px) {
     display: block;
+    top: 65px;
+  }
+
+  @media screen and (max-width: 460px) {
+ 
+    top: 79px;
   }
 }
 
@@ -68,7 +83,7 @@ picture {
   width: 23px;
   height: 22px;
 
-   padding-right: 28px;
+  padding-right: 28px;
 
   background-image: url(../images/burger-menu/close.svg);
   background-repeat: no-repeat;
@@ -83,28 +98,29 @@ picture {
   flex-direction: column;
   align-items: flex-start;
   gap: 0;
- 
+
   width: 100%;
   max-width: 768px;
- 
+
   background-color: var(--white);
   padding-top: 68px;
   padding-left: 26px;
- }
+}
 
 .nav-item {
   color: var(--grey);
   letter-spacing: 0.02em;
   transition: all 250ms ease;
-}
 
+  cursor: pointer;
+}
 
 .burger-menu .nav-item {
   font-family: "Gilroy-Bold";
   font-size: 34px;
   line-height: 1.23;
   margin-bottom: 68px;
- }
+}
 
 .current {
   color: var(--black);
@@ -165,7 +181,7 @@ picture {
   margin-top: 40px;
   margin-bottom: 50px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 460px) {
     width: 124px;
     margin-top: 55px;
   }
@@ -246,7 +262,6 @@ picture {
 
 .skills-list {
   display: flex;
-  // flex-direction: row;
   justify-content: space-between;
 
   gap: 142px;
